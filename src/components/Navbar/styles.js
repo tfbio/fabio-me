@@ -7,14 +7,21 @@ export const NavContainer = styled.div`
 
 export const NavItems = styled.div`
   justify-content: center;
-  width: 5.2rem;
-
   margin-right: 2rem;
   border-bottom: orange solid 1.2px;
   transition: 0.3s ease-out;
 
+  min-width: 5.2rem;
+  width: 6.8vw;
+  @media (max-width: 768px) {
+    width: 5.2rem;
+  }
+
   a {
-    font-size: 1.2rem;
+    font-size: 1.6vw;
+    @media (max-width: 768px) {
+    font-size: 1.4rem;
+  }
   }
 
   :hover {
