@@ -28,7 +28,7 @@ export const ProjectImage = styled.div`
 
   strong {
     position: absolute;
-    bottom: 0;
+    top: 0;
     padding: 0.6rem 2rem; 
     background-color: rgba(0,0,0,.7);
     width: 100%;

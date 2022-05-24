@@ -70,3 +70,45 @@ export const Footer = styled.div`
   border-top: 1px solid #000000;
   padding: 0.4rem 0;
 `
+
+export const ResumeHeader = styled.div`
+  width: 100%;
+  padding: 0.6rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #000 ;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+
+
+  a {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+  }
+
+  button {
+    align-items: center;
+
+    p {
+      font-size: 1.1rem;
+      color: #000;
+      margin-left: 0.4rem;
+    }
+  }
+
+  
+  svg {
+    height: 1.6rem;
+    width: 1.4rem;
+    color: #000;
+  }
+`
+
+export const ResumeSection = styled.section`
+
+  width: 65%;
+  height: fit-content;
+  background: white;
+  margin: 2rem 0;
+`

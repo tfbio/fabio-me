@@ -4,14 +4,8 @@ import WelcomeMessage from '../components/WelcomeMessage'
 import ProjectCard from '../components/ProjectCard'
 import { WelcomeSection, ProjectSection, AboutSection, Footer, Projects, Scrolldown } from '@styles/homeStyles'
 import { BsChevronCompactDown } from 'react-icons/bs'
-import { useState } from 'react'
 
 export default function Home() {
-  /*
-  const [modalOpen, setModalOpen] = useState(false)
-
-  function toggleModal() { setModalOpen(!modalOpen) }
-*/
   return (
     <div className="container">
       <Head>

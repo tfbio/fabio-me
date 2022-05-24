@@ -70,9 +70,4 @@ export const LinksContainer = styled.div`
     margin-right: 0.45rem;
     margin-bottom: 0.45rem;
   }
-
-  button {
-    width: min-content;
-    font-size: 1rem;
-  }
 `

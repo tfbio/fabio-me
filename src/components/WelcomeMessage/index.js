@@ -1,5 +1,6 @@
 import { WelcomeContainer, MainText, SecondaryText, LinksContainer } from './styles'
 import { FaGithub, FaLinkedin, FaPaperclip } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function WelcomeMessage() {
   return (
@@ -29,12 +30,14 @@ export default function WelcomeMessage() {
             <FaGithub style={{color: '#000', background: '#fff'}} />
           </div>
         </a>
-        <button type='button'>
-          <strong>Resume</strong>
-          <div>
-            <FaPaperclip style={{color: '#000'}}/>
-          </div>
-        </button>
+        <Link href="/resume">
+          <a>
+            <strong>Resume</strong>
+            <div>
+              <FaPaperclip style={{color: '#000'}}/>
+            </div>
+          </a>
+        </Link>
       </LinksContainer>
     </WelcomeContainer>
   )
