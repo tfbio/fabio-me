@@ -5,6 +5,27 @@ export const WelcomeContainer = styled.div`
   align-items: flex-end;
   margin-top: -6rem;
   margin-right: 4%;
+
+  @keyframes SlideInFromLeft {
+    from { 
+      right: 10%;
+      opacity: 0%;
+    }
+    to {
+      right: 0%;
+      opacity: 100%;
+    }
+  }
+  @keyframes SlideInFromRight {
+    from { 
+      left: 10%;
+      opacity: 0%;
+    }
+    to {
+      left: 0%;
+      opacity: 100%;
+    }
+  }
 `
 
 export const MainText = styled.div`
@@ -13,11 +34,22 @@ export const MainText = styled.div`
     margin-left: 0.6rem;
     margin-bottom: 0.4rem;
     font-weight: bold;
+
+    opacity: 0%;
+    position: relative;
+    animation: SlideInFromLeft;
+    animation-duration: 0.8s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;  
+    transition: all 0.3s;
   }
+
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-end;
   }
+
+  
 `
 
 export const SecondaryText = styled.div`
@@ -26,6 +58,14 @@ export const SecondaryText = styled.div`
     font-size: 1.4rem;
     margin-left: 0.4rem;
     font-weight: bold;
+
+    opacity: 0%;
+    position: relative;
+    animation: SlideInFromLeft;
+    animation-duration: 0.8s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;  
+    transition: all 0.3s;
   }
   @media (max-width: 768px) {
     flex-direction: column;
@@ -39,6 +79,14 @@ export const LinksContainer = styled.div`
   margin-top: 1.2rem;
   flex-direction: column;
   align-items: flex-end;
+
+  opacity: 0%;
+  position: relative;
+  animation: SlideInFromRight;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;  
+  transition: all 0.3s;
 
   @media (max-width: 768px) {
     margin-right: 0;
@@ -70,4 +118,5 @@ export const LinksContainer = styled.div`
     margin-right: 0.45rem;
     margin-bottom: 0.45rem;
   }
+ 
 `

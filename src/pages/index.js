@@ -1,9 +1,22 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import WelcomeMessage from '../components/WelcomeMessage'
 import ProjectCard from '../components/ProjectCard'
-import { WelcomeSection, ProjectSection, AboutSection, Footer, Projects, Scrolldown } from '@styles/homeStyles'
+import ContactForm from '../components/ContactForm'
+import wordCloud from '../assets/word-cloud.png'
+import { 
+  WelcomeSection,
+  ProjectSection,
+  AboutSection, 
+  Footer, 
+  Projects, 
+  Scrolldown,
+  AboutContent,
+  FooterLinks
+} from '@styles/homeStyles'
 import { BsChevronCompactDown } from 'react-icons/bs'
+import { firstParagraph, secondParagraph } from '../content/about'
 
 export default function Home() {
   return (
@@ -30,8 +43,27 @@ export default function Home() {
         </ProjectSection>
         <AboutSection>
           <h1 style={{marginTop: 28}}>About Me</h1>
+          <AboutContent>
+            <div>
+              <p>{firstParagraph}</p>
+              <p>{secondParagraph}</p>
+            </div>
+            <Image 
+              src={wordCloud}
+              height={450}
+              width={350}
+            />
+          </AboutContent>
         </AboutSection>
-        <Footer>Here is a footer mate</Footer>
+        <Footer>
+          <FooterLinks>
+            <h1>Sections</h1>
+            <p>Back to Top</p>
+            <p>Projects</p>
+            <p>About</p>
+          </FooterLinks>
+          <ContactForm />
+        </Footer>
       </main>
     </div>
   )

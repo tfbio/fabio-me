@@ -55,7 +55,13 @@ button {
   cursor: pointer;
 }
 
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
 
-
-
+::placeholder {
+  font-size: 1.1rem;
+  font-family: 'Raleway', sans-serif;
+}
 

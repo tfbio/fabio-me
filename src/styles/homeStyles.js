@@ -64,11 +64,48 @@ export const AboutSection = styled.section`
     border-bottom-right-radius: 6px;
   }
 `
+export const AboutContent = styled.div`
+  margin-top: -0.4rem;
+  width: 100vw;
+  padding: 0 4%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+  grid-gap: 1.8rem;
+  align-items: center;
+
+  div {
+    flex-direction: column;
+
+    p {
+      margin-bottom: 1.4rem;
+      font-size: 1.1rem;
+      color: #000;
+    }
+  }
+`
 
 export const Footer = styled.div`
   background: #d9d9d9;
   border-top: 1px solid #000000;
-  padding: 0.4rem 0;
+  padding:  0;
+  width: 100vw;
+  padding: 0.4rem 4%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+  grid-gap: 1.8rem;
+  justify-items: center;
+  align-items: center;
+
+  div {
+    flex-direction: column;
+  }
+`
+export const FooterLinks = styled.div`
+  background: red;
+
+  p {
+
+  }
 `
 
 export const ResumeHeader = styled.div`

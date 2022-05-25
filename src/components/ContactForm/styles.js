@@ -1,0 +1,57 @@
+import styled from 'styled-components'
+
+export const FormContainer = styled.div`
+  margin: 2rem 0;
+  background: #fff;
+  padding: 1.2rem 2rem;
+  width: fit-content;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.62);
+
+  h1 {
+    color: #000;
+    margin-bottom: 1.6rem;
+  }
+
+  div {
+    align-items: center;
+    background: #d9d9d9;
+    padding: 0.4rem 0.6rem 0 0.6rem; 
+    border-radius: 8px;
+    margin-bottom: 0.3rem;
+    
+    input {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      background: transparent;
+      border: transparent;
+      width: 22rem;
+      outline: none;
+    }
+
+    textarea {
+      background: transparent;
+      border: transparent;
+      outline: none;
+      resize: none;
+    }
+  }
+  
+
+  button {
+    margin-top: 0.4rem;
+    background: #4dff4d;
+    border-radius: 8px;
+    padding: 0.8rem 1.6rem;
+    color: #000;
+    margin-left: 78%;
+
+    strong {
+      color: #000;
+    } 
+
+    :hover {
+      background:  #00b300;
+    }
+  }
+`
