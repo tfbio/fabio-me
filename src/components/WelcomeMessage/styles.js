@@ -34,22 +34,12 @@ export const MainText = styled.div`
     margin-left: 0.6rem;
     margin-bottom: 0.4rem;
     font-weight: bold;
-
-    opacity: 0%;
-    position: relative;
-    animation: SlideInFromLeft;
-    animation-duration: 0.8s;
-    animation-delay: 0.1s;
-    animation-fill-mode: forwards;  
-    transition: all 0.3s;
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-end;
   }
-
-  
 `
 
 export const SecondaryText = styled.div`
@@ -59,13 +49,6 @@ export const SecondaryText = styled.div`
     margin-left: 0.4rem;
     font-weight: bold;
 
-    opacity: 0%;
-    position: relative;
-    animation: SlideInFromLeft;
-    animation-duration: 0.8s;
-    animation-delay: 0.2s;
-    animation-fill-mode: forwards;  
-    transition: all 0.3s;
   }
   @media (max-width: 768px) {
     flex-direction: column;
@@ -118,5 +101,17 @@ export const LinksContainer = styled.div`
     margin-right: 0.45rem;
     margin-bottom: 0.45rem;
   }
- 
 `
+/*
+
+    opacity: 0%;
+    right: 10%;
+
+    position: relative;
+    animation: SlideInFromLeft;
+    animation-duration: 0.8s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;  
+    transition: all 0.3s;
+
+*/
