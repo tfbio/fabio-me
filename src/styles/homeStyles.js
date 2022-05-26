@@ -122,11 +122,7 @@ export const ResumeHeader = styled.div`
     display: flex;
     flex-direction: row;
     margin-right: 2rem;
-  }
-
-  button {
-    align-items: center;
-
+    
     p {
       font-size: 1.1rem;
       color: #000;
@@ -134,7 +130,6 @@ export const ResumeHeader = styled.div`
     }
   }
 
-  
   svg {
     height: 1.6rem;
     width: 1.4rem;

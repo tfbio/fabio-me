@@ -30,7 +30,7 @@ export default function WelcomeMessage() {
             <FaGithub style={{color: '#000', background: '#fff'}} />
           </div>
         </a>
-        <Link href="/resume">
+        <Link href="https://github.com/tfbio/test1/blob/main/Sample_text.pdf">
           <a>
             <strong>Resume</strong>
             <div>
