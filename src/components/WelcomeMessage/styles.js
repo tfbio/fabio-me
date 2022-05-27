@@ -7,14 +7,8 @@ export const WelcomeContainer = styled.div`
   margin-right: 4%;
 
   @keyframes SlideInFromLeft {
-    from { 
-      right: 10%;
-      opacity: 0%;
-    }
-    to {
-      right: 0%;
-      opacity: 100%;
-    }
+    from { right: 10%; opacity: 0%; }
+    to { right: 0%; opacity: 100%; }
   }
   @keyframes SlideInFromRight {
     from { 

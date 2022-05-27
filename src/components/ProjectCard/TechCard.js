@@ -1,9 +1,9 @@
-import { TechItem } from './styles'
+import styles from './Project.module.scss'
 
 export default function TechCard({title}) {
   return (
-    <TechItem>
+    <div className={styles.item}>
       <p>{title}</p>
-    </TechItem>
+    </div>
   )
 }

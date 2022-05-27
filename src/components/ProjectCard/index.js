@@ -1,27 +1,30 @@
 import Image from 'next/image'
-import { ProjectContainer, ProjectImage, TechContainer, Description } from './styles'
 import TechCard from './TechCard'
+import Tag from './Tag'
 import placholder from '../../assets/sample-image.jpg'
+import styles from './Project.module.scss'
 
-export default function ProjectCard({ image, title, description, techs }) {
+export default function ProjectCard({ image, title, description, techs, icon }) {
   return (
-    <ProjectContainer>
-      <ProjectImage>
+    <div className={styles.container}>
+      <div className={styles.projectImage}>
         <Image
           src={placholder}        
         />
         <strong>Project</strong>
-      </ProjectImage>
-      <Description>this is a neat description of this project my man</Description>
-      <TechContainer>
+        <div className={styles.tagList}>
+          {icon && <Tag icon={icon}/>}
+          <Tag icon="github"/>
+        </div>
+      </div>
+      <p className={styles.description}>this is a neat description of this project my man</p>
+      <div className={styles.techContainer}>
         <TechCard title="Next.js"/>
         <TechCard title="Next.js 1"/>
         <TechCard title="Next.js 2"/>
         <TechCard title="Next.js 3"/>
-        <TechCard title="Next.js 1"/>
-        <TechCard title="Next.js 2"/>
-        <TechCard title="Next.js 3"/>
-      </TechContainer>
-    </ProjectContainer>
+        <TechCard title="Next.js 4"/>
+      </div>
+    </div>
   )
 }

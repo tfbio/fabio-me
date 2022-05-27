@@ -1,12 +1,12 @@
 import NavItem from './NavItem'
-import { NavContainer } from './styles'
+import styles from './Nav.module.scss'
 
 export default function Navigation() {
   return (
-    <NavContainer>
+    <div className={styles.container}>
       <NavItem title="Projects" href="#" />
       <NavItem title="About" href="#" />
       <NavItem title="Contact" href="#" />
-    </NavContainer>
+    </div>
   )
 }

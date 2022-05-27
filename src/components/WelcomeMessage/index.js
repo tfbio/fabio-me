@@ -1,23 +1,23 @@
-import { WelcomeContainer, MainText, SecondaryText, LinksContainer } from './styles'
 import { FaGithub, FaLinkedin, FaPaperclip } from 'react-icons/fa'
+import styles from './Welcome.module.scss'
 import Link from 'next/link'
 
 export default function WelcomeMessage() {
   return (
-    <WelcomeContainer>
-      <MainText>
-        <span>Looking for</span>
-        <span>a web</span>
-        <span>developer?</span>
-      </MainText>
-      <SecondaryText>
-        <span>I'm Fabio Oliveira,</span>
-        <span style={{color: 'orange'}}>Frontend</span>
-        <span>and</span>
-        <span style={{color: 'orange'}}>Backend</span>
-        <span>developer</span>
-      </SecondaryText>
-      <LinksContainer>
+    <div className={styles.container}>
+      <div className={styles.mainText}>
+        <strong>Looking for</strong>
+        <strong>a web</strong>
+        <strong>developer?</strong>
+      </div>
+      <div className={styles.secondaryText}>
+        <strong>I'm Fabio Oliveira,</strong>
+        <strong style={{color: 'orange'}}>Frontend</strong>
+        <strong>and</strong>
+        <strong style={{color: 'orange'}}>Backend</strong>
+        <strong>developer</strong>
+      </div>
+      <div className={styles.links}>
         <a href="http://www.linkedin.com/in/ftavares-oliveira">
           <strong>Connect in</strong>
           <div>
@@ -38,7 +38,7 @@ export default function WelcomeMessage() {
             </div>
           </a>
         </Link>
-      </LinksContainer>
-    </WelcomeContainer>
+      </div>
+    </div>
   )
 }

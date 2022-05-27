@@ -6,15 +6,11 @@ import ProjectCard from '../components/ProjectCard'
 import ContactForm from '../components/ContactForm'
 import wordCloud from '../assets/word-cloud.png'
 import { 
-  WelcomeSection,
-  ProjectSection,
-  AboutSection, 
   Footer, 
-  Projects, 
-  Scrolldown,
   AboutContent,
   FooterLinks
 } from '@styles/homeStyles'
+import styles from '../styles/Home.module.scss'
 import { BsChevronCompactDown } from 'react-icons/bs'
 import { firstParagraph, secondParagraph } from '../content/about'
 
@@ -26,22 +22,20 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
-        <WelcomeSection>
+        <section className={styles.welcome}>
           <WelcomeMessage/>
-          <Scrolldown>
-            <BsChevronCompactDown />
-          </Scrolldown>
-        </WelcomeSection>
-        <ProjectSection>
+          <BsChevronCompactDown className={styles.scrolldown}/>
+        </section>
+        <section className={styles.projects}>
           <h1 style={{marginTop: -8}}>Projects</h1>
-          <Projects>
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-          </Projects>
-        </ProjectSection>
-        <AboutSection>
+          <div className={styles.projectlist}>
+            <ProjectCard icon='live'/>
+            <ProjectCard icon='live'/>
+            <ProjectCard icon='live'/>
+            <ProjectCard/>
+          </div>
+        </section>
+        <section className={styles.about}>
           <h1 style={{marginTop: 28}}>About Me</h1>
           <AboutContent>
             <div>
@@ -54,7 +48,7 @@ export default function Home() {
               width={350}
             />
           </AboutContent>
-        </AboutSection>
+        </section >
         <Footer>
           <FooterLinks>
             <h1>Sections</h1>
