@@ -7,8 +7,6 @@ export default async function (request, response) {
   if(!request.body.name || !request.body.message || !request.body.email) {
     return response.status(400).end()
   }
-  console.log(typeof(request.body.message));
-  console.log(typeof(request.body.email));
 
   try {
     const senderData = {
@@ -33,12 +31,14 @@ export default async function (request, response) {
       if (error) {
         console.log('error in auth')
       } else {
+        /*
         transporter.sendMail(senderData, function (error, info) {
           if(error)
             console.log('error when sending email')
           else
             console.log(info)
         })
+        */
       }
     })
 

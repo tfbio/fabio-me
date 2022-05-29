@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FormContainer } from './styles'
 
 
@@ -8,7 +8,16 @@ export default function ContactForm() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [hasSubmitted, setHasSubmitted] = useState(false)
+  const [sent, setSent] = useState(false)
+
+  useEffect(() => {
+    setName('')
+    setEmail('')
+    setMessage('')
+    Array.from(document.querySelectorAll('input')).forEach(input => (input.value = ""))
+    Array.from(document.querySelectorAll('textarea')).forEach(input => (input.value = ""))
+    setSent(false)
+  }, [sent])
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -24,7 +33,16 @@ export default function ContactForm() {
         },
         body: JSON.stringify(body)
       })
-      console.log(response);
+
+      //if response is shit, guard clause and alert
+      if(response.status !== 200) {
+        alert('Error trying to send message.')
+      }
+
+      setSent(true)
+      alert('message was sent.')
+
+      
     } catch (error) {
       console.error(error);
     }
