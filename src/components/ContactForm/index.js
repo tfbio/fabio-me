@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FormContainer } from './styles'
-
+import styles from './Contact.module.scss'
 
 // Usa o YUP para validação dos campos do form
 
@@ -49,9 +48,9 @@ export default function ContactForm() {
   }
 
   return (
-    <FormContainer>
+    <div className={styles.formContainer}>
       <h1>Contact Me</h1>
-      <div>
+      <div className={styles.fieldContainer}>
         <input 
           type="text"
           name='name'
@@ -59,7 +58,7 @@ export default function ContactForm() {
           onChange={(e)=>{setName(e.target.value)}}
         />
       </div>
-      <div>
+      <div className={styles.fieldContainer}>
         <input
           type="email"
           name='email'
@@ -67,7 +66,7 @@ export default function ContactForm() {
           onChange={(e)=>{setEmail(e.target.value)}}
         />
       </div>
-      <div>
+      <div className={styles.fieldContainer}>
         <textarea 
           name='message'
           placeholder='Message'
@@ -79,6 +78,6 @@ export default function ContactForm() {
       <button type='submit' onClick={(e)=>{handleSubmit(e)}}>
         <strong>Send</strong>
       </button>
-    </FormContainer>
+    </div>
   )
 }
