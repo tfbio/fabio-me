@@ -1,7 +1,7 @@
 module.exports.projects = [
   {
     id: 1,
-    image: 'https://i.imgur.com/I0Afiiv.jpg',
+    image: 'https://i.imgur.com/hX2WAkO.jpg',
     title: 'Discord Music Bot',
     description: 'Music Bot for creating and playing queues in Discord making use of async/await functions and external APIs',
     techs: [
