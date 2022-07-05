@@ -8,12 +8,14 @@ import wordCloud from '../assets/word-cloud.png'
 import styles from '../styles/Home.module.scss'
 import { BsChevronCompactDown } from 'react-icons/bs'
 import { firstParagraph, secondParagraph } from '../content/about'
+import { projects } from '../content/projects'
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Home | Fabio.me</title>
+        <title>Fabio.me</title>
+        <link rel="icon" href="../../public/favicon.ico" />
       </Head>
       <main id="welcome">
         <Navbar />
@@ -24,10 +26,17 @@ export default function Home() {
         <section className={styles.projects}>
           <h1 style={{marginTop: -8}} id="projects">Projects</h1>
           <div className={styles.projectlist}>
-            <ProjectCard icon='live'/>
-            <ProjectCard icon='live'/>
-            <ProjectCard icon='live'/>
-            <ProjectCard/>
+            {projects.map(project => (
+              <ProjectCard 
+                key={project.id}
+                title={project.title}
+                image={project.image}
+                description={project.description}
+                techs={project.techs}
+                github={project.github}
+                live={project.live}
+              />
+            ))}
           </div>
         </section>
         <section className={styles.about}>

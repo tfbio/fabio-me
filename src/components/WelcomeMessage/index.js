@@ -18,7 +18,7 @@ export default function WelcomeMessage() {
         <strong>developer</strong>
       </div>
       <div className={styles.links}>
-        <a href="http://www.linkedin.com/in/ftavares-oliveira">
+        <a href="http://www.linkedin.com/in/ftoliveira/">
           <strong>Connect in</strong>
           <div>
             <FaLinkedin style={{color: '#2759aa', background: '#fff'}} />
@@ -30,7 +30,7 @@ export default function WelcomeMessage() {
             <FaGithub style={{color: '#000', background: '#fff'}} />
           </div>
         </a>
-        <Link href="https://github.com/tfbio/test1/blob/main/Sample_text.pdf">
+        <Link href="https://github.com/tfbio/cv/blob/main/CV%20Fabio%20Oliveira.pdf">
           <a>
             <strong>Resume</strong>
             <div>
